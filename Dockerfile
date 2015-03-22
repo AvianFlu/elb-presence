@@ -1,7 +1,6 @@
-FROM ubuntu:14.04
+FROM gliderlabs/alpine
 
-RUN apt-get update
-RUN apt-get install -y python-boto
+RUN apk --update add python py-boto
 
 ADD elb-presence /bin/elb-presence
 
